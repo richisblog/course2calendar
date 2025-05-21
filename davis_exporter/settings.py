@@ -11,12 +11,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c#@(9nv)kd!$-b&8o$2r#^#a5q_qhd@-%9m8b2_#x8@6z@82y7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['course2calendar-grhwasgshbcadycw.westus-01.azurewebsites.net','ucdavis.1calendar.top']
 
 # Application definition
-
+# In settings.py
+CSRF_TRUSTED_ORIGINS = ['https://course2calendar-grhwasgshbcadycw.westus-01.azurewebsites.net']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
