@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c#@(9nv)kd!$-b&8o$2r#^#a5q_qhd@-%9m8b2_#x8@6z@82y7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['course2calendar-grhwasgshbcadycw.westus-01.azurewebsites.net']
 
