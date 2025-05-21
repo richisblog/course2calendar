@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-c#@(9nv)kd!$-b&8o$2r#^#a5q_qhd@-%9m8b2_#x8@6z@82y7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['course2calendar-grhwasgshbcadycw.westus-01.azurewebsites.net']
+ALLOWED_HOSTS = ['course2calendar-grhwasgshbcadycw.westus-01.azurewebsites.net','ucdavis.1calendar.top']
 
 # Application definition
 
