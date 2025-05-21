@@ -1,0 +1,55 @@
+{% extends 'converter/base.html' %}
+
+{% block title %}UC Davis课表导出工具 - 主页{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>上传课表HTML文件</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="{{ form.html_file.id_for_label }}" class="form-label">{{ form.html_file.label }}</label>
+                        {{ form.html_file }}
+                        <div class="form-text">{{ form.html_file.help_text }}</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">生成日历</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>使用说明</h3>
+            </div>
+            <div class="card-body">
+                <h5>如何获取课表HTML文件：</h5>
+                <ol>
+                    <li>访问 <a href="https://schedule.ucdavis.edu/" target="_blank">UC Davis Schedule Builder</a></li>
+                    <li>登录您的账户并选择要导出的学期</li>
+                    <li>确保您已经注册了所有想要导出的课程</li>
+                    <li>按下 <kbd>Ctrl+S</kbd> 或 <kbd>Command+S</kbd> 保存网页为HTML文件</li>
+                    <li>上传保存的HTML文件到本工具</li>
+                </ol>
+                
+                <h5>日历功能包括：</h5>
+                <ul>
+                    <li>课程安排（包括所有类型：讲座、讨论、实验等）</li>
+                    <li>期末考试时间（提前10分钟提醒）</li>
+                    <li>课程退课截止日期</li>
+                </ul>
+                
+                <h5>使用生成的ICS文件：</h5>
+                <ul>
+                    <li>可导入到Google日历、Apple日历、Outlook等日历应用</li>
+                    <li>包含课程地点、时间和提醒</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

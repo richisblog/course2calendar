@@ -1,0 +1,32 @@
+{% extends 'converter/base.html' %}
+
+{% block title %}UC Davis课表导出工具 - 错误{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="alert alert-danger">
+            <h4 class="alert-heading">出错了！</h4>
+            <p>{{ error }}</p>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{% url 'converter:index' %}" class="btn btn-primary">返回首页</a>
+        </div>
+        
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3>可能的解决方法</h3>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>确保上传的是从UC Davis Schedule Builder保存的完整HTML文件</li>
+                    <li>检查HTML文件大小，正常的课表HTML文件应该有几MB大小</li>
+                    <li>确保你的账户中有已注册的课程</li>
+                    <li>尝试重新从Schedule Builder保存HTML文件</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
